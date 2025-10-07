@@ -1,3 +1,11 @@
+# Directories & files
+data
+runs
+resources/dotLumen_SW-Challenge3.zip
+resources/dotLumen_SW-Challenge3.docx
+resources/weights
+resources/outputs
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]

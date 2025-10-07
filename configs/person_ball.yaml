@@ -1,0 +1,11 @@
+# YOLOv8 dataset configuration for person + sports ball detection
+
+path: /home/kyouma/Codes/Watch-the-ball-CV/data/coco_person_ball
+
+train: images/train
+val: images/val
+
+# Classes
+names:
+  0: person
+  1: sports ball

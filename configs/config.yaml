@@ -1,0 +1,38 @@
+dataset:
+  root: "data/coco_person_ball"
+  categories: [1, 37]   # 1=person, 37=sports ball
+  require_all: true     # keep only images with ALL categories
+  split_ratio: 0.80
+  seed: 42
+  use_augmentations: true
+
+augmentations:
+  horizontal_flip: 0.5
+  brightness_contrast: 0.2
+  hue_saturation: 0.3
+  blur: 0.2
+
+objects:
+  football_radius: 0.11   # meters
+
+inference:
+  video: "resources/rgb.avi"
+  weights: "resources/weights/yolov8_person_ball.pt"
+  csv_out: "resources/outputs/detections.csv"
+  out_video: "resources/outputs/annotated.avi"
+
+  # Model and detection settings
+  conf: 0.25
+  device: "0"          # e.g., "0" for CUDA:0, or "cpu"
+  max_frames: null      # set to integer to limit frames
+
+  # RealSense D435i RGB intrinsics
+  fx: 912.36
+  fy: 910.26
+  cx: 648.57
+  cy: 363.66
+  fov_h: 70.09
+  fov_v: 43.16
+
+  # Visualization
+  draw: true
