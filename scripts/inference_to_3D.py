@@ -11,7 +11,7 @@ from tools.object_tracker import ObjectTracker
 
 
 # Load configuration
-CFG = '/home/kyouma/Codes/Watch-the-ball-CV/configs/config.yaml'
+CFG = os.path.join(os.getcwd(), '/configs/config.yaml')
 with open(CFG, "r") as f:
     cfg = yaml.safe_load(f)
 
