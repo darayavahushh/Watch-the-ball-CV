@@ -12,6 +12,12 @@ augmentations:
   hue_saturation: 0.3
   blur: 0.2
 
+training:
+  batch_size: 16
+  image_size: 640
+  epochs: 50
+  workers: 4
+
 objects:
   football_radius: 0.11   # meters
 
@@ -20,6 +26,7 @@ inference:
   weights: "resources/weights/yolov8_person_ball.pt"
   csv_out: "resources/outputs/detections.csv"
   out_video: "resources/outputs/annotated.avi"
+  bev_video: "resources/outputs/bev_output.avi"
 
   # Model and detection settings
   conf: 0.25

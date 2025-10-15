@@ -5,7 +5,7 @@ import yaml
 from tqdm import tqdm
 from pycocotools.coco import COCO
 
-CFG='/home/kyouma/Codes/Watch-the-ball-CV/configs/config.yaml'
+CFG='configs/config.yaml'
 
 def create_filtered_coco(src_root, dst_root, config_path):
     # Load config
@@ -74,7 +74,7 @@ def create_filtered_coco(src_root, dst_root, config_path):
 
 
 if __name__ == "__main__":
-    src_root = "/home/kyouma/Codes/Watch-the-ball-CV/data/coco2017"
-    dst_root = "/home/kyouma/Codes/Watch-the-ball-CV/data/coco_person_ball"
+    src_root = "data/coco2017"
+    dst_root = "data/coco_person_ball"
 
     create_filtered_coco(src_root, dst_root, CFG)
